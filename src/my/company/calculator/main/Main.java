@@ -1,4 +1,4 @@
-package my.company.calculator.codigo_main;
+package my.company.calculator.main;
 
 import my.company.calculator.menu.Menu_Operacoes;
 import my.company.calculator.menu.Menu_Usuario;
