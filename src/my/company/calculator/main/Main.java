@@ -29,14 +29,37 @@ public class Main {
             }
             numero1 = Integer.parseInt(args[0]);
             numero2 = Integer.parseInt(args[1]);
-        }else {
-            System.out.println("digite um numero");
-            numero1 = entrada.nextInt();
-            System.out.println("digite um segundo numero");
-            numero2 = entrada.nextInt();
-        }
-        double resultado = ExecutadorOperacoes.executador(numero1, numero2,escolhamenuOperacao);
-        System.out.println("Resultado " + resultado);
-    }
+        } else {
+            while (true) {
+                System.out.println("Digite o primeiro numero");
 
+                if (entrada.hasNextInt()) {
+                   numero1 = entrada.nextInt();
+                    entrada.nextLine();
+                    break;
+                } else {
+                    System.out.println("Erro, Digite apenas numeros inteiros");
+                    entrada.nextLine();
+                }
+            }
+
+            while (true) {
+                System.out.println("Digite o segundo numero:");
+
+                if (entrada.hasNextInt()) {
+                    numero2 = entrada.nextInt();
+                    entrada.nextLine();
+                    break;
+                } else {
+                    System.out.println("Erro, Digite apenas numeros inteiros");
+                    entrada.nextLine();
+                }
+            }
+        }
+        double resultado = ExecutadorOperacoes.executador(numero1, numero2, escolhamenuOperacao);
+        System.out.println("Resultado " + resultado);
+
+
+
+    }
 }

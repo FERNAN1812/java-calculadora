@@ -12,10 +12,19 @@ public class Menu_Operacoes {
        System.out.println("2 - Multiplicação ");
        System.out.println("3 - Subitração ");
        System.out.println("4 - Divisão ");
-       System.out.println("Escolha:");
 
        int escolhamenuOp;
-       escolhamenuOp = entrada.nextInt();
+       while (true) {
+
+           if (entrada.hasNextInt()) {
+               escolhamenuOp = entrada.nextInt();
+               entrada.nextLine();
+               break;
+           } else {
+               System.out.println("Erro, Digite apenas numeros inteiros de 1 a 4");
+               entrada.nextLine();
+           }
+       }
        return escolhamenuOp;
    }
 }
