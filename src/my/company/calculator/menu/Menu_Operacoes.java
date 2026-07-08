@@ -1,12 +1,10 @@
 package my.company.calculator.menu;
 
-import java.util.Scanner;
+import my.company.calculator.util.Entrada;
 
 public class Menu_Operacoes {
 
    public static int menuOperacoes() {
-       Scanner entrada = new Scanner(System.in);
-
        System.out.println("=== Operações === ");
        System.out.println("1 - Adição  ");
        System.out.println("2 - Multiplicação ");
@@ -16,13 +14,13 @@ public class Menu_Operacoes {
        int escolhamenuOp;
        while (true) {
 
-           if (entrada.hasNextInt()) {
-               escolhamenuOp = entrada.nextInt();
-               entrada.nextLine();
+           if (Entrada.entrada.hasNextInt()) {
+               escolhamenuOp = Entrada.entrada.nextInt();
+               Entrada.entrada.nextLine();
                break;
            } else {
                System.out.println("Erro, Digite apenas numeros inteiros de 1 a 4");
-               entrada.nextLine();
+               Entrada.entrada.nextLine();
            }
        }
        return escolhamenuOp;
