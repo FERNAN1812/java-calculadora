@@ -6,7 +6,7 @@ public class Menu_Usuario {
 
     public static int mostrar_menu(){
 
-        System.out.println("=== Calculadora 2.4 ===");
+        System.out.println("=== Calculadora 2.5 ===");
         System.out.println("1-Argumento");
         System.out.println("2-Scanner");
         int escolhamenu;
